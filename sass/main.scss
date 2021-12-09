@@ -1,1 +1,11 @@
-@import "./variables";
+@import "./utils/variables";
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/modal-form";
+@import "./components/advantages";
+@import "./components/work";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/portfolio";

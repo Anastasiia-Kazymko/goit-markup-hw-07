@@ -1,11 +1,11 @@
 header {
   border: 1px solid #ececec;
 }
-.nav__container {
+.header__container {
   display: flex;
   align-items: center;
 }
-.nav__main {
+.nav {
   display: flex;
   align-items: center;
 }
@@ -36,12 +36,12 @@ header {
   &:focus {
     color: $acent-color;
   }
-  &.current {
+  &--current {
     color: $acent-color;
     position: relative;
   }
 }
-.site-nav__link.current::after {
+.site-nav__link--current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -71,6 +71,9 @@ header {
   &:hover,
   &:focus {
     color: $acent-color;
+  }
+  &:not(:last-child) {
+    margin-right: 50px;
   }
 }
 .contacts-nav__icon {

@@ -1,11 +1,11 @@
 .advantages {
   display: flex;
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
 }
 .advantages__item {
   width: 270px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 .advantages__title {
   color: $title-text-color;
@@ -18,7 +18,7 @@
   margin-top: 0;
   margin-bottom: 10px;
 }
-.advantages__image {
+.advantages__box {
   display: flex;
   align-items: center;
   justify-content: center;

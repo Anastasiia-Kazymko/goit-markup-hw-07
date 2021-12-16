@@ -32,8 +32,21 @@ body {
   margin-bottom: 50px;
 }
 
-.section.no-padding-top {
+.section--no-padding-top {
   padding-top: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 ul {
@@ -54,19 +67,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
 }
 
 /******backdrop****/
@@ -132,12 +132,12 @@ header {
   border: 1px solid #ececec;
 }
 
-.nav__container {
+.header__container {
   display: flex;
   align-items: center;
 }
 
-.nav__main {
+.nav {
   display: flex;
   align-items: center;
 }
@@ -171,12 +171,12 @@ header {
   color: #2196f3;
 }
 
-.site-nav__link.current {
+.site-nav__link--current {
   color: #2196f3;
   position: relative;
 }
 
-.site-nav__link.current::after {
+.site-nav__link--current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -208,6 +208,10 @@ header {
 
 .contacts-nav__link:hover, .contacts-nav__link:focus {
   color: #2196f3;
+}
+
+.contacts-nav__link:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contacts-nav__icon {
@@ -445,12 +449,12 @@ textarea {
   display: flex;
 }
 
-.advantages:not(:last-child) {
-  margin-right: 30px;
-}
-
 .advantages__item {
   width: 270px;
+}
+
+.advantages__item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .advantages__title {
@@ -464,7 +468,7 @@ textarea {
   margin-bottom: 10px;
 }
 
-.advantages__image {
+.advantages__box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -480,7 +484,7 @@ textarea {
   height: 70px;
 }
 
-.work__list {
+.work {
   display: flex;
 }
 
@@ -492,7 +496,7 @@ textarea {
   margin-right: 30px;
 }
 
-.work__name {
+.work__box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -547,7 +551,7 @@ textarea {
   margin-right: 30px;
 }
 
-.team__name {
+.team__box {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -626,7 +630,7 @@ textarea {
   border: 1px solid #2196f3;
 }
 
-.clients__image {
+.clients__icon {
   fill: currentColor;
 }
 
